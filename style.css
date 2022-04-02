@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 20px 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead th {
+  border: 1px solid gray;
+  padding: 8px;
+  background-color: #c8ffff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+table tbody td {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+blockquote {
+  background-color: #eaeaea;
+  border-left: 3px solid #5f5f5f;
+  padding: 12px 16px;
+  margin-left: 12px;
+}
+
+blockquote p {
+  color: #404040;
+  margin: 0;
+  padding: 0;
+}
