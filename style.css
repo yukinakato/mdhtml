@@ -1,15 +1,26 @@
 body {
   margin: 0;
-  padding: 20px 40px;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin-bottom: 0;
+}
+
+h1:not(:first-child),
+h2:not(:first-child) {
+  margin-top: 60px;
 }
 
 table {
   border-collapse: collapse;
+  margin: 20px 0;
 }
 
 table thead th {
   border: 1px solid gray;
-  padding: 8px;
+  padding: 4px;
   background-color: #c8ffff;
 }
 
@@ -19,7 +30,7 @@ table tbody tr:nth-child(even) {
 
 table tbody td {
   border: 1px solid gray;
-  padding: 8px;
+  padding: 4px;
 }
 
 blockquote {
@@ -30,7 +41,39 @@ blockquote {
 }
 
 blockquote p {
-  color: #404040;
+  color: #303030;
   margin: 0;
   padding: 0;
+}
+
+details > summary {
+  font-weight: bold;
+}
+
+details > *:not(summary, table) {
+  background-color: #efefef;
+  padding: 16px 16px;
+}
+
+.sidebar-and-main {
+  display: flex;
+  flex-direction: row;
+}
+
+#render-main {
+  padding: 20px 40px;
+  flex-grow: 1;
+}
+
+#render-sidebar {
+  background-color: #ececec;
+  min-width: 200px;
+  height: 100vh;
+  position: sticky;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  border-right: 1px solid gray;
 }
