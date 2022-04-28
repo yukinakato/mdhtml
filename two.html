@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="marked.min.js"></script>
+    <title>２カラム</title>
+  </head>
+  <body>
+    <textarea id="sidebar" style="display: none">
+
+### a
+[title1](#title1)
+[title2](#title2)
+[title3](#title3)
+
+### b
+[title4](#title4)
+[title5](#title5)
+[title6](#title6)
+[title7](#title7)
+
+### c
+[title8](#title8)
+[title9](#title9)
+[title10](#title10)
+
+    </textarea>
+    <textarea id="content" style="display: none">
+
+# title1
+---
+decsription
+
+<details><summary>openme</summary>
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+</details>
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title2
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title3
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title4
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title5
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title6
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title7
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title8
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title9
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+
+</details>
+
+
+# title10
+---
+decsription
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+<details><summary>openme</summary>
+
+```
+int main(void){
+  return 0;
+}
+```
+</details>
+      
+    </textarea>
+    <div class="sidebar-and-main">
+      <div id="render-sidebar">sidebar</div>
+      <div id="render-main"></div>
+    </div>
+    <script>
+      document.getElementById("render-sidebar").innerHTML = marked.parse(
+        document.getElementById("sidebar").innerText,
+        { breaks: true, headerIds: false }
+      );
+      document.getElementById("render-main").innerHTML = marked.parse(
+        document.getElementById("content").innerText,
+        { breaks: true, headerIds: false }
+      );
+    </script>
+  </body>
+</html>
