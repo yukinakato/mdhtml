@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="github-markdown-light.css" />
+    <script src="marked.min.js"></script>
+    <title>タイトル</title>
+  </head>
+  <body>
+    <div id="r" class="markdown-body"></div>
+    <script>
+      document.getElementById("r").innerHTML = marked.parse(
+        `
+
+
+
+# title
+contents
+contents
+
+* topic
+  * detail
+* topic
+  * detail
+* topic
+  * detail
+
+**bold**
+~~cancel~~
+
+|  TH  |  TH  |
+| ---- | ---- |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+|  TD  |  TD  |
+
+
+# title
+contents
+
+1. one
+2. two
+3. three
+
+text
+
+> quote
+
+text
+
+
+
+`,
+        { breaks: true, headerIds: false }
+      );
+    </script>
+  </body>
+</html>
